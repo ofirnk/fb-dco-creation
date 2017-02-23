@@ -6,12 +6,17 @@ import sys
 
 ###### EDIT INPUT PARAMETERS START ##########
 campaign_name = '<CAMPAIGN_NAME>'
-account_id = '<ACCOUNT_ID>'
+account_id = '<ACCOUNT_ID>' # Your ad account id withou act_
 token = '<ACCESS_TOKEN>'
-campaign_objective = "LINK_CLICKS"
 promoted_page_id = '<PAGE_ID>'
 adset_budget = 'BUDGET_IN_CENTS' # this is in cents, default is $5000
 ###### EDIT INPUT PARAMETERS STOP ##########
+
+###### Optional parameters to be edited start
+campaign_objective = "LINK_CLICKS"
+adset_end_time = str(int(time.time())+2330000) # this is in unix time default is current time + 1 month
+adset_name = 'DCO Ad Set'
+###### Optional parameters to be edited stop
 
 adset_end_time = str(int(time.time())+2330000) # this is in unix time default is current time + 1 month
 adset_name = 'DCO Ad Set'
