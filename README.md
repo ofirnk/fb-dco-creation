@@ -8,3 +8,5 @@ This script automates the process for creating DCO campaigns, asset feed and ad 
 2. Open dco.py and edit input parameters on top to include required parameters including campaign_name, account_id, access_token, promoted_page_id and ad_set_budget
 
 3. Open script in your terminal and run python dco.py -f dco_input.csv
+
+If you encounter a bug in this script, send an email to mali@fb.com
