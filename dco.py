@@ -21,7 +21,7 @@ adset_name = 'DCO Ad Set'
 adset_end_time = str(int(time.time())+2330000) # this is in unix time default is current time + 1 month
 adset_name = 'DCO Ad Set'
 
-if(len(sys.argv) < 3):
+if(len(sys.argv) <> 3):
     print "Please provide a file with dco images, bodies titles etc. python dco.py -f dco_input.csv"
     sys.exit(0)
 
@@ -117,10 +117,10 @@ feed_data = {
     'links' : []
 }
 
+data = parse(file_path,feed_data)
 campaign_id = create_campaign()
 if(campaign_id):
     print "Campaign created with id: ", str(campaign_id)
-    data = parse(file_path,feed_data)
     feed_id = create_asset_feed(token, data)
     if(feed_id):
         print "DCO Feed created, id: " + str(feed_id)
